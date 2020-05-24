@@ -46,3 +46,14 @@ extension Item {
         )
     }
 }
+
+extension Item: Equatable {
+    
+    static func ==( lhs: Item, rhs: Item ) -> Bool {
+        
+        return lhs.name == rhs.name
+            && lhs.serialNumber == rhs.serialNumber
+            && lhs.valueInDollars == rhs.valueInDollars
+            && lhs.dateCreated == rhs.dateCreated
+    }
+}
