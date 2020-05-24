@@ -64,4 +64,16 @@ extension ItemsViewController {  // data source
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCell.EditingStyle,
+                            forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let item = itemStore.allItems[ indexPath.row ]
+            itemStore.removeItem( item )
+            tableView.deleteRows( at: [indexPath], with: .automatic )
+        }
+    }
 }
