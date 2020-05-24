@@ -27,4 +27,13 @@ class ItemStore {
             allItems.remove( at: index )
         }
     }
+    
+    func moveItem( from fromIndex: Int, to toIndex: Int ) {
+        
+        guard fromIndex != toIndex else {
+            return
+        }
+        
+        allItems.swapAt( fromIndex, toIndex )
+    }
 }

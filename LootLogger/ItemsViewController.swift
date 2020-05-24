@@ -12,6 +12,7 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
+    
     //MARK: - Table Delegate methods
     
     @IBAction func addNewItem( _ sender: UIButton ) {
@@ -40,7 +41,7 @@ class ItemsViewController: UITableViewController {
 
 //MARK: - Table Data Source methods
 
-extension ItemsViewController {  // data source
+extension ItemsViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -75,5 +76,13 @@ extension ItemsViewController {  // data source
             itemStore.removeItem( item )
             tableView.deleteRows( at: [indexPath], with: .automatic )
         }
+    }
+
+    override func tableView(_ tableView: UITableView,
+                            moveRowAt sourceIndexPath: IndexPath,
+                            to destinationIndexPath: IndexPath) {
+        
+        itemStore.moveItem( from: sourceIndexPath.row,
+                            to: destinationIndexPath.row )
     }
 }
