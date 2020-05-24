@@ -24,8 +24,9 @@ extension ItemsViewController {  // data source
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // create an instance of UITableViewCell with default appearance
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        // get a new or recycled cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell",
+                                                 for: indexPath)
         
         // set the text on the cell with the description of the item
         // that is the nth index of items, where n = row# this cell
