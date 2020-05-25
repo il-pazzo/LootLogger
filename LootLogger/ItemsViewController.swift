@@ -20,6 +20,26 @@ class ItemsViewController: UITableViewController {
         tableView.estimatedRowHeight = 65
     }
     
+    //MARK: - Prepare for segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        guard let segueIdentifier = segue.identifier else {
+            preconditionFailure( "Segue identifier not present" )
+        }
+        
+        switch segueIdentifier {
+        case "showItem":
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let item = itemStore.allItems[ row ]
+                let vc = segue.destination as! DetailViewController
+                vc.item = item
+            }
+        default:
+            preconditionFailure( "Unexpected segue identifier: \(segueIdentifier)" )
+        }
+    }
+    
     //MARK: - Table Delegate methods
     
     @IBAction func addNewItem( _ sender: UIButton ) {
