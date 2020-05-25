@@ -17,6 +17,7 @@
 		BBBC4C8A247B1BDE0075630A /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC4C89247B1BDE0075630A /* ItemsViewController.swift */; };
 		BBBC4C8C247B1C9D0075630A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC4C8B247B1C9D0075630A /* Item.swift */; };
 		BBBC4C8E247B200A0075630A /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC4C8D247B200A0075630A /* ItemStore.swift */; };
+		BBBC4C90247BAA460075630A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC4C8F247BAA460075630A /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BBBC4C89247B1BDE0075630A /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		BBBC4C8B247B1C9D0075630A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BBBC4C8D247B200A0075630A /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		BBBC4C8F247BAA460075630A /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				BBBC4C5B247B19E10075630A /* SceneDelegate.swift */,
 				BBBC4C89247B1BDE0075630A /* ItemsViewController.swift */,
 				BBBC4C8B247B1C9D0075630A /* Item.swift */,
+				BBBC4C8F247BAA460075630A /* ItemCell.swift */,
 				BBBC4C8D247B200A0075630A /* ItemStore.swift */,
 				BBBC4C5F247B19E10075630A /* Main.storyboard */,
 				BBBC4C62247B19E20075630A /* Assets.xcassets */,
@@ -267,6 +270,7 @@
 			files = (
 				BBBC4C8C247B1C9D0075630A /* Item.swift in Sources */,
 				BBBC4C8A247B1BDE0075630A /* ItemsViewController.swift in Sources */,
+				BBBC4C90247BAA460075630A /* ItemCell.swift in Sources */,
 				BBBC4C5A247B19E10075630A /* AppDelegate.swift in Sources */,
 				BBBC4C8E247B200A0075630A /* ItemStore.swift in Sources */,
 				BBBC4C5C247B19E10075630A /* SceneDelegate.swift in Sources */,
