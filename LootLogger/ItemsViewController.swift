@@ -12,7 +12,6 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -71,6 +70,10 @@ extension ItemsViewController {
         cell.nameLabel.text = item.name
         cell.serialNumberLabel.text = item.serialNumber
         cell.valueLabel.text = "$\(item.valueInDollars)"
+        
+        cell.valueLabel.backgroundColor = item.valueInDollars < 50
+            ? UIColor.systemGreen.withAlphaComponent( 0.20 )
+            : UIColor.systemRed  .withAlphaComponent( 0.20 )
         
         return cell
     }
