@@ -27,6 +27,13 @@ class ItemsViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    required init?(coder: NSCoder) {
+        
+        super.init( coder: coder )
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
     //MARK: - Prepare for segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,6 +48,11 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[ row ]
                 let vc = segue.destination as! DetailViewController
                 vc.item = item
+                
+                navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back",
+                                                                   style: .plain,
+                                                                   target: nil,
+                                                                   action: nil )
             }
         default:
             preconditionFailure( "Unexpected segue identifier: \(segueIdentifier)" )
@@ -49,7 +61,7 @@ class ItemsViewController: UITableViewController {
     
     //MARK: - Table Delegate methods
     
-    @IBAction func addNewItem( _ sender: UIButton ) {
+    @IBAction func addNewItem( _ sender: UIBarButtonItem ) {
         
         let newItem = itemStore.createItem()
         
@@ -57,18 +69,6 @@ class ItemsViewController: UITableViewController {
             
             let indexPath = IndexPath( row: index, section: 0 )
             tableView.insertRows( at: [indexPath], with: .automatic )
-        }
-    }
-    
-    @IBAction func toggleEditingMode( _ sender: UIButton ) {
-        
-        if isEditing {
-            sender.setTitle( "Edit", for: .normal )
-            setEditing( false, animated: true )
-        }
-        else {
-            sender.setTitle( "Done", for: .normal )
-            setEditing( true, animated: true )
         }
     }
 }
