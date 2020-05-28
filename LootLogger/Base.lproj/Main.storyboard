@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TEn-JR-j5g">
-                                <rect key="frame" x="16" y="96" width="343" height="625"/>
+                                <rect key="frame" x="16" y="96" width="343" height="576"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KY4-wf-T8V" userLabel="Name Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
@@ -146,7 +146,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-To-dza">
-                                        <rect key="frame" x="0.0" y="126" width="343" height="499"/>
+                                        <rect key="frame" x="0.0" y="126" width="343" height="450"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -157,14 +157,27 @@
                                     <constraint firstItem="3fx-ir-c3K" firstAttribute="leading" secondItem="Q8S-ba-NCW" secondAttribute="leading" id="QIS-0W-KsF"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3A-BP-UEB">
+                                <rect key="frame" x="0.0" y="680" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="mod-S6-YvD">
+                                        <connections>
+                                            <action selector="choosePhotoSource:" destination="y0Y-qb-WP8" id="KxG-Rs-Cza"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="TEn-JR-j5g" secondAttribute="trailing" id="0Mb-uH-ZAO"/>
-                            <constraint firstItem="cKC-QX-A3t" firstAttribute="bottom" secondItem="TEn-JR-j5g" secondAttribute="bottom" constant="8" id="5fY-rm-cFm"/>
+                            <constraint firstItem="L3A-BP-UEB" firstAttribute="bottom" secondItem="cKC-QX-A3t" secondAttribute="bottom" id="KwZ-a8-P3g"/>
+                            <constraint firstItem="L3A-BP-UEB" firstAttribute="top" secondItem="TEn-JR-j5g" secondAttribute="bottom" constant="8" id="NK0-3L-XnE"/>
                             <constraint firstAttribute="leadingMargin" secondItem="TEn-JR-j5g" secondAttribute="leading" id="htH-s4-Vlw"/>
                             <constraint firstItem="TEn-JR-j5g" firstAttribute="top" secondItem="cKC-QX-A3t" secondAttribute="top" constant="8" id="tjC-op-orj"/>
+                            <constraint firstAttribute="trailing" secondItem="L3A-BP-UEB" secondAttribute="trailing" id="vUj-Jc-eRV"/>
+                            <constraint firstItem="L3A-BP-UEB" firstAttribute="leading" secondItem="obD-87-0AJ" secondAttribute="leading" id="y7e-xn-74Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cKC-QX-A3t"/>
                         <connections>
