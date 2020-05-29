@@ -11,6 +11,7 @@ import UIKit
 class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     override func viewDidLoad() {
         
@@ -48,6 +49,7 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[ row ]
                 let vc = segue.destination as! DetailViewController
                 vc.item = item
+                vc.imageStore = imageStore
                 
                 navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back",
                                                                    style: .plain,
@@ -113,6 +115,7 @@ extension ItemsViewController {
             
             let item = itemStore.allItems[ indexPath.row ]
             itemStore.removeItem( item )
+            imageStore.deleteImage( forKey: item.itemKey )
             tableView.deleteRows( at: [indexPath], with: .automatic )
         }
     }
