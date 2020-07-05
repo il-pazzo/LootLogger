@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		BB43765924811E730095CDBD /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		BB4376A324845E270095CDBD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BB9B2A20247C783E00717D5F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BBBC4C56247B19E10075630A /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBBC4C59247B19E10075630A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		BBBC4C4D247B19E10075630A = {
 			isa = PBXGroup;
 			children = (
+				BB4376A324845E270095CDBD /* README.md */,
 				BBBC4C58247B19E10075630A /* LootLogger */,
 				BBBC4C6F247B19E20075630A /* LootLoggerTests */,
 				BBBC4C7A247B19E20075630A /* LootLoggerUITests */,
