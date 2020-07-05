@@ -6,7 +6,7 @@ _Please note:_ This code is no substitution for the content of the book, which i
 
 Chapter 9:
 
-1. table views using the `value1` cell style
+1. table views using the `value1` (Right Detail) cell style
 2. hacking buttons for Edit and Add
 3. add, delete, move rows
 4. injecting ItemStore into ItemsViewController
