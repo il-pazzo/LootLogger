@@ -6,10 +6,11 @@ _Please note:_ This code is no substitution for the content of the book, which i
 
 Chapter 9:
 
-1. table views using "value1" cell style
+1. table views using the `value1` cell style
 2. hacking buttons for Edit and Add
 3. add, delete, move rows
 4. injecting ItemStore into ItemsViewController
+5. the `Equatable` protocol and overriding `==`
 
 Chapter 10:
 
@@ -35,11 +36,11 @@ Chapter 12:
 
 Chapter 13:
 
-1. Codable via supported primitives, manually ("For the more curious")
+1. `Codable` via supported primitives, manually ("For the more curious")
 2. do/try/catch
-3. accessing the Documents directory via FileManager URL
-4. persisting data via PropertyListEncoder, PropertyListDecoder
-5. using NotificationCenter for didEnterBackgroundNotification
+3. accessing the Documents directory via `FileManager` URL
+4. persisting data via `PropertyListEncoder`, `PropertyListDecoder`
+5. using `NotificationCenter` for `.didEnterBackgroundNotification`
 
 Chapter 14:
 
@@ -50,8 +51,8 @@ Chapter 14:
 Chapter 15:
 
 1. implementing camera/image picker
-2. separate image store, plus NSCache
-3. unique keys via UUID
+2. separate image store, plus `NSCache`
+3. unique keys via `UUID`
 
 Chapter 16:
 
